@@ -24,14 +24,15 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.blue,
         ),
         body: SafeArea(
-          child: ListView.builder(
-              itemCount: contactBook.length,
-              itemBuilder: (context, index) {
-                final contact = contactBook.contact(atIndex: index)!;
-                return ListTile(
-                  title: Text(contact.name),
-                );
-              }),
-        ));
+            child: ListView.builder(
+                itemCount: contactBook.length,
+                itemBuilder: (context, index) {
+                  final contact = contactBook.contact(atIndex: index)!;
+                  return ListTile(
+                    title: Text(contact.name),
+                  );
+                }),
+            // adding a new contact using a widget.
+            floatingActionButton: FloatingActionButton(onPressed: onPressed)));
   }
 }
