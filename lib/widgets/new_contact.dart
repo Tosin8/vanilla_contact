@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'contact_class.dart';
+
 class NewContactView extends StatefulWidget {
   const NewContactView({super.key});
 
@@ -34,8 +36,16 @@ class _NewContactViewState extends State<NewContactView> {
           TextField(
             controller: _controller,
             decoration: const InputDecoration(
-              hintText: 'Enter a new contact here',
+              hintText: 'Enter a new contact here...',
             ),
+          ),
+          TextButton(
+            onPressed: () {
+              final contact = Contact(name: _controller.text);
+              ContactBook().add(contact: contact);
+              Navigator.of(context).pop();
+            },
+            child: const Text('Add Contact'),
           )
         ],
       ),
