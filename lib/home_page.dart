@@ -12,7 +12,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Contacts'),
+          title: Text(
+            'Contacts',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
           backgroundColor: Colors.blue,
         ),
         body: Center(
