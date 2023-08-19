@@ -12,4 +12,11 @@ class ContactBook {
   factory ContactBook() => _shared;
 
   final List<Contact> _contacts = []; // an empty list array to begin with.
+  int get length => _contacts.length;
+
+// to add a new contact
+  void add({required Contact contact}) {}
 }
+
+// to remove a contact
+void remove({required Contact contact}) {}
