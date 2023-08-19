@@ -12,7 +12,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Contacts',
             style: TextStyle(
               color: Colors.white,
@@ -20,8 +20,10 @@ class _HomePageState extends State<HomePage> {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: Center(
-          child: Text('Contact List'),
+        body: const SafeArea(
+          child: Center(
+            child: Text('Contact List'),
+          ),
         ));
   }
 }
