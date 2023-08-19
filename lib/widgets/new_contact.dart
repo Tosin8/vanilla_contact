@@ -30,7 +30,12 @@ class _NewContactViewState extends State<NewContactView> {
         title: const Text('Add New Contact'),
       ),
       body: Column(
-        children: [],
+        children: [
+          TextField(
+            controller: _controller,
+            decoration: BoxDecoration(),
+          )
+        ],
       ),
     );
   }
