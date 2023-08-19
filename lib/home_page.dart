@@ -23,10 +23,15 @@ class _HomePageState extends State<HomePage> {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: const SafeArea(
-          child: Center(
-            child: Text('Contact List'),
-          ),
+        body: SafeArea(
+          child: ListView.builder(
+              itemCount: contactBook.length,
+              itemBuilder: (context, index) {
+                final contact = contactBook.contact(atIndex: index)!;
+                return ListTile(
+                  title: Text(contact.name),
+                );
+              }),
         ));
   }
 }
