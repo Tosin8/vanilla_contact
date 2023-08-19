@@ -34,9 +34,11 @@ class _HomePageState extends State<HomePage> {
           },
         ),
         // adding a new contact using a widget.
-        floatingActionButton: const FloatingActionButton(
-          onPressed: null,
-          child: Icon(Icons.add),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('/new-contact');
+          },
+          child: const Icon(Icons.add),
         ),
       ),
     );
