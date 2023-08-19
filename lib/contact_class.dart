@@ -15,8 +15,14 @@ class ContactBook {
   int get length => _contacts.length;
 
 // to add a new contact
-  void add({required Contact contact}) {}
-}
+  void add({required Contact contact}) {
+    _contacts.add(contact);
+  }
 
 // to remove a contact
-void remove({required Contact contact}) {}
+  void remove({required Contact contact}) {
+    _contacts.remove(contact);
+  }
+
+  // a function to retrieve contacts with index.
+}
