@@ -8,6 +8,21 @@ class NewContactView extends StatefulWidget {
 }
 
 class _NewContactViewState extends State<NewContactView> {
+  late final TextEditingController _controller;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _controller.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
