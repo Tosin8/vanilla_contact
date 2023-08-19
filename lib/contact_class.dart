@@ -25,4 +25,6 @@ class ContactBook {
   }
 
   // a function to retrieve contacts with index.
+  Contact? contact({required int atIndex}) =>
+      _contacts.length > atIndex ? _contacts[atIndex] : null;
 }
