@@ -11,7 +11,9 @@ class ContactBook {
   static final ContactBook _shared = ContactBook._sharedInstance();
   factory ContactBook() => _shared;
 
-  final List<Contact> _contacts = []; // an empty list array to begin with.
+  final List<Contact> _contacts = [
+    const Contact(name: 'Foo Bar')
+  ]; // an empty list array to begin with.
   int get length => _contacts.length;
 
 // to add a new contact
