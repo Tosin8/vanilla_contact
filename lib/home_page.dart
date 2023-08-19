@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'contact_class.dart';
+import 'widgets/contact_class.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,26 +15,30 @@ class _HomePageState extends State<HomePage> {
     final contactBook = ContactBook();
     return SafeArea(
       child: Scaffold(
-          appBar: AppBar(
-            title: const Text(
-              'Contacts',
-              style: TextStyle(
-                color: Colors.white,
-              ),
+        appBar: AppBar(
+          title: const Text(
+            'Contacts',
+            style: TextStyle(
+              color: Colors.white,
             ),
-            backgroundColor: Colors.blue,
           ),
-          body: ListView.builder(
-            itemCount: contactBook.length,
-            itemBuilder: (context, index) {
-              final contact = contactBook.contact(atIndex: index)!;
-              return ListTile(
-                title: Text(contact.name),
-              );
-            },
-          ),
-          // adding a new contact using a widget.
-          floatingActionButton: FloatingActionButton(onPressed: null)),
+          backgroundColor: Colors.blue,
+        ),
+        body: ListView.builder(
+          itemCount: contactBook.length,
+          itemBuilder: (context, index) {
+            final contact = contactBook.contact(atIndex: index)!;
+            return ListTile(
+              title: Text(contact.name),
+            );
+          },
+        ),
+        // adding a new contact using a widget.
+        floatingActionButton: const FloatingActionButton(
+          onPressed: null,
+          child: Icon(Icons.add),
+        ),
+      ),
     );
   }
 }
