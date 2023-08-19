@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class NewContactView extends StatefulWidget {
   const NewContactView({super.key});
 
@@ -8,6 +10,13 @@ class NewContactView extends StatefulWidget {
 class _NewContactViewState extends State<NewContactView> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Add New Contact'),
+      ),
+      body: Column(
+        children: [],
+      ),
+    );
   }
 }
