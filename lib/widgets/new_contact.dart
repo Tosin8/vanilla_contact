@@ -33,7 +33,9 @@ class _NewContactViewState extends State<NewContactView> {
         children: [
           TextField(
             controller: _controller,
-            decoration: BoxDecoration(),
+            decoration: const InputDecoration(
+              hintText: 'Enter a new contact here',
+            ),
           )
         ],
       ),
