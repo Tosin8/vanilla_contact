@@ -1,9 +1,10 @@
 class Contact {
+  final String id;
   final String name;
 
   const Contact({
     required this.name,
-  });
+  }) : id = Uuid().v4();
 }
 
 class ContactBook {
