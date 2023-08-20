@@ -7,7 +7,7 @@ class Contact {
   Contact({
     required this.name,
   }) : id = const Uuid().v4();
-}s
+}
 
 class ContactBook {
   ContactBook._sharedInstance();
