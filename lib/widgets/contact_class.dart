@@ -1,4 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
+import 'new_contact.dart';
 
 class Contact {
   final String id;
@@ -9,8 +11,8 @@ class Contact {
   }) : id = const Uuid().v4();
 }
 
-class ContactBook {
-  ContactBook._sharedInstance();
+class ContactBook extends ValueNotifier<List><Contact>> {
+  ContactBook._sharedInstance() : super([]);
   static final ContactBook _shared = ContactBook._sharedInstance();
   factory ContactBook() => _shared;
 
