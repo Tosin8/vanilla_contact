@@ -1,11 +1,13 @@
+import 'package:uuid/uuid.dart';
+
 class Contact {
   final String id;
   final String name;
 
-  const Contact({
+  Contact({
     required this.name,
-  }) : id = Uuid().v4();
-}
+  }) : id = const Uuid().v4();
+}s
 
 class ContactBook {
   ContactBook._sharedInstance();
