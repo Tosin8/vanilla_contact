@@ -21,6 +21,7 @@ class ContactBook extends ValueNotifier<List><Contact>> {
 
 // to add a new contact
   void add({required Contact contact}) {
+    final ValueNotifier notifier; 
     _contacts.add(contact);
   }
 
